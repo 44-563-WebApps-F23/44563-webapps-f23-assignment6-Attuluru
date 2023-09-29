@@ -15,7 +15,7 @@
         <label for="var1">Guess the author</label>
         <input type="text" id="var1">
         <input type="button" onclick="checkAuthor()" value="Check the guess">
-        <p>Result:<span id="score"></span></p>
+        <p>good/oops:<span id="score"></span></p>
     </form>
     <script>
         var good = 0;
@@ -27,6 +27,7 @@
             var a = guess.value;
             var b = guess2.value;
             if (a == b) {
+                good++;
                 alert("You got it right");
             }
             else {
@@ -34,15 +35,8 @@
                 alert("Sorry");
             }
             var result = document.getElementById("score");
-            score.textContent = good + "/" + (good + oops);
-
-
+            score.textContent = good + "/" + oops;
         }
     </script>
-
-
-
-
 </body>
-
 </html>
