@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Entry</title>
+</head>
+
+<body>
+    <h1>
+        Author entry Akshay
+    </h1>
+    <form>
+        <label for="var">The hidden author name</label>
+        <input type="password" id="var" value="Dickens">
+        <label for="var1">Guess the author</label>
+        <input type="text" id="var1">
+        <input type="button" onclick="checkAuthor()" value="Check the guess">
+        <p>Result:<span id="score"></span></p>
+    </form>
+    <script>
+        var good = 0;
+        var oops = 0;
+        function checkAuthor() {
+
+            var guess = document.getElementById("var");
+            var guess2 = document.getElementById("var1");
+            var a = guess.value;
+            var b = guess2.value;
+            if (a == b) {
+                alert("You got it right");
+            }
+            else {
+                oops++;
+                alert("Sorry");
+            }
+            var result = document.getElementById("score");
+            score.textContent = good + "/" + (good + oops);
+
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
