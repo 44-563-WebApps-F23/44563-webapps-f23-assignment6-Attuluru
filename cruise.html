@@ -32,8 +32,8 @@
     function updateCruise(){
         let date=document.getElementById("day").value;
         let pricecruise=document.getElementById("price").value;
-        my_cruise['days']=date;
-        my_cruise['price']=pricecruise;
+        my_cruise.days=date;
+        my_cruise.price=pricecruise;
         document.getElementById("resu").innerHTML=JSON.stringify(my_cruise);
     }
 
