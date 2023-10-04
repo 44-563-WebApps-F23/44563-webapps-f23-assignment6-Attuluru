@@ -38,5 +38,25 @@
             score.textContent = good + "/" + oops;
         }
     </script>
+
+    <div class="container">
+        <img id="selectImage" src="LosAngeles.jpg" alt="image of one city" length="100px" width="100px" onclick="selectImage()   ">
+        <script>
+            var useImage=1;
+            function selectImage(){
+                switch(useImage){
+                    case 1: document.getElementById('selectImage').src="Salt-Lake-City-Utah.webp";
+                    useImage=useImage+1;
+                    break;
+                    case 2: document.getElementById("selectImage").src="Trivandrum.jpg";
+                    useImage+=1;
+                    break;
+                    case 3: document.getElementById("selectImage").src="LosAngeles.jpg";
+                    useImage=useImage+1;
+                    break;
+                }
+            }
+        </script>
+    </div>
 </body>
 </html>
