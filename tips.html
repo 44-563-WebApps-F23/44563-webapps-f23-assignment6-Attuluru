@@ -3,17 +3,23 @@
 
 <head>
     <title>form Check</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Akshay shows tip amounts</h1>
+    <h1 style="background-color: black; color: gold; text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;"><i>Akshay shows tip amounts</i></h1>
     <h2>Getting input</h2>
     <label for="tip1">Enter base amount</label>
     <input type="number" value=50 id="tip1">
     <label for="tipper">Enter the tip percent</label>
     <input type="number" value=15 id="tipper">
     <input type="button" value="Show tip" onclick="tips()">
-    <p id="results">To put our results</p>
+    <p id="results" style="font-size: large; color: blue; font-family: cursive;">To put our results</p>
     <script>
         function tips() {
             let basevalue = document.getElementById("tip1").value;
@@ -41,7 +47,7 @@
         <input type="button" onclick="chooseOp()" value="Get values from radio group">
     </form>
 
-    <p id="radioresults">This will be replaced with radioresults</p>
+    <p id="radioresults" style=" font-family: cursive; color: rgb(196, 56, 72);font-size: large;">This will be replaced with radioresults</p>
     <script>
         function chooseOp() {
             let basevalue = document.getElementById("tip1").value;
@@ -52,9 +58,9 @@
                 case "sum": ans = parseInt(basevalue) + parseInt(tipPercen);
                             break;
                 case "difference": ans = parseInt(basevalue) - parseInt(tipPercen);
-                                break;
+                            break;
                 case "product": ans = parseInt(basevalue) * parseInt(tipPercen);
-                                break;
+                            break;
             }
             let out=document.getElementById("radioresults")
             out.innerHTML = operand + ' of ' + basevalue + ' and ' + tipPercen + ' is ' + ans;
